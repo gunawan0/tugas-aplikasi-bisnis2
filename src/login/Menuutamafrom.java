@@ -5,6 +5,8 @@
  */
 package login;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author PANGERAN
@@ -40,6 +42,11 @@ public class Menuutamafrom extends javax.swing.JFrame {
         jMenu1.setText("File");
 
         Exit.setText("Exit");
+        Exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitActionPerformed(evt);
+            }
+        });
         jMenu1.add(Exit);
 
         jMenuBar1.add(jMenu1);
@@ -81,6 +88,15 @@ public class Menuutamafrom extends javax.swing.JFrame {
     private void barangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_barangActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_barangActionPerformed
+
+    private void ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitActionPerformed
+      
+int selectedOption = JOptionPane.showConfirmDialog(null,
+     "Apakah anda akan menutup system?", "Tutup Aplikasi", JOptionPane.YES_NO_OPTION);
+ if (selectedOption == JOptionPane.YES_OPTION) {
+ System.exit(0);
+ 
+    }//GEN-LAST:event_ExitActionPerformed
 
     /**
      * @param args the command line arguments
